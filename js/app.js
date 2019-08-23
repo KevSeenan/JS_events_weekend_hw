@@ -34,10 +34,14 @@ const createBandListItem = function (form) {
   genre.textContent = form.genre.value;
   bandListItem.appendChild(genre);
 
+  const purchased = document.createElement('p');
+  purchased.textContent = "This album is in my collection";
+  bandListItem.appendChild(purchased);
+
   return bandListItem;
 }
 
 const handleDeleteAllClick = function (event) {
   const bandList = document.querySelector('#band-list');
   bandList.innerHTML = '';
-} 
+}
