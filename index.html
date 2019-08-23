@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Band Album List App</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <form id="new-form-item">
+      <div id="form-wrapper">
+        <div class="for-item">
+          <label for="title" class="primary">Band/Artist</label>
+          <input type="text" id="title" required/>
+        </div>
+
+        <div id="new-form-item">
+          <label for="album" class="primary">Album</label>
+          <input type="text" id="album" required/>
+        </div>
+
+        <div id= "new-form-item">
+          <label for="genre" class="primary">Genre</label>
+          <select id="genre">
+            <option value="" disabled selected></option>
+            <option value="Rock">Rock</option>
+            <option value="Metal">Metal</option>
+            <option value="Nu Metal">Nu Metal</option>
+            <option value="Blues">Blues</option>
+            <option value="Reggae">Reggae</option>
+            <option value="Punk">Punk</option>
+            <option value="Prog">Prog</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="save"/>
+    </form>
+
+    <button id="delete-all">Delete All</button>
+
+    <h1>My Favourite Bands/Artists</h1>
+    <div id="band-list"></div>
+  </body>
+</html>
