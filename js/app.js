@@ -19,6 +19,8 @@ const handleNewFormSubmit = function (event) {
 }
 
 const createBandListItem = function (form) {
+
+
   const bandListItem = document.createElement('div');
   bandListItem.classList.add('band-list-item');
 
@@ -34,9 +36,10 @@ const createBandListItem = function (form) {
   genre.textContent = form.genre.value;
   bandListItem.appendChild(genre);
 
-  const purchased = document.createElement('p');
-  purchased.textContent = "This album is in my collection";
-  bandListItem.appendChild(purchased);
+  const rating = document.createElement('p');
+  rating.textContent = form.rating.value;
+  bandListItem.appendChild(rating);
+
 
   return bandListItem;
 }

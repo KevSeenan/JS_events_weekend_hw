@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   </head>
   <body>
+    <h1>Your Music Collection</h1>
     <form id="new-form-item">
       <div id="form-wrapper">
         <div class="form-item">
@@ -35,16 +36,21 @@
           </select>
         </div>
         <div>
-          <label for="purchased" class="primary">Purchased</label>
-          <input type="radio" id="purchased">
+          <label for="rating" class="primary">Horn Rating</label>
+          <input type="radio" id="rating" value="1 horn">1
+          <input type="radio" id="rating" value="2 horns">2
+          <input type="radio" id="rating" value="3 horns">3
+          <input type="radio" id="rating" value="4 horns">4
+          <input type="radio" id="rating" value="5 horns">5
         </div>
       </div>
-      <input type="submit" value="save"/>
+      <input type="submit" value="Save"/>
     </form>
 
     <button id="delete-all">Delete All</button>
 
-    <h1>My Favourite Bands/Artists</h1>
-    <div id="band-list"></div>
+    <h1>My Favourite Bands/Artists and Albums</h1>
+    <div id="band-list">
+    </div>
   </body>
 </html>
