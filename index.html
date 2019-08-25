@@ -13,17 +13,17 @@
     <form id="new-form-item">
       <div id="form-wrapper">
         <div class="form-item">
-          <label for="band" class="primary">Band/Artist</label>
+          <label for="band" class="primary">Band/Artist:</label>
           <input type="text" id="band" required/>
         </div>
 
         <div id="new-form-item">
-          <label for="album" class="primary">Album</label>
+          <label for="album" class="primary">Album:</label>
           <input type="text" id="album" required/>
         </div>
 
         <div id="new-form-item">
-          <label for="genre" class="primary">Genre</label>
+          <label for="genre" class="primary">Genre:</label>
           <select id="genre">
             <option value="" disabled selected>Genre</option>
             <option value="Rock">Rock</option>
@@ -36,12 +36,16 @@
           </select>
         </div>
         <div>
-          <label for="rating" class="primary">Horn Rating</label>
+          <label for="rating" class="primary">Horn Rating:</label>
           <input type="radio" id="rating" value="1 horn">1
           <input type="radio" id="rating" value="2 horns">2
           <input type="radio" id="rating" value="3 horns">3
           <input type="radio" id="rating" value="4 horns">4
           <input type="radio" id="rating" value="5 horns">5
+        </div>
+        <div>
+          <label for="purchased" class="primary">Purchased</label>
+          <input type="checkbox" id="purchased" value="">
         </div>
       </div>
       <input type="submit" value="Save"/>

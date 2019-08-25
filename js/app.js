@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const deleteAllButton = document.querySelector('#delete-all');
   deleteAllButton.addEventListener('click', handleDeleteAllClick);
+
+  const purchasedAlbum = document.querySelector('#band-list');
+  purchasedAlbum.addEventListener('click', handlePurchasedAlbum);
 });
 
 const handleNewFormSubmit = function (event) {
@@ -18,8 +21,9 @@ const handleNewFormSubmit = function (event) {
   event.target.reset();
 }
 
-const createBandListItem = function (form) {
 
+
+const createBandListItem = function (form) {
 
   const bandListItem = document.createElement('div');
   bandListItem.classList.add('band-list-item');
@@ -40,11 +44,20 @@ const createBandListItem = function (form) {
   rating.textContent = form.rating.value;
   bandListItem.appendChild(rating);
 
+  const purchased = document.createElement('p');
+  purchased.textContent = "Have this album?"
+  bandListItem.appendChild(purchased);
 
   return bandListItem;
 }
 
+
 const handleDeleteAllClick = function (event) {
   const bandList = document.querySelector('#band-list');
   bandList.innerHTML = '';
+}
+
+const handlePurchasedAlbum = function (event) {
+  const result = document.querySelector('.band-list-item');
+  event.target.textContent = 'I have this album';
 }
